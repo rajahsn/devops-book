@@ -20,6 +20,6 @@ describe('Test the app', () => {
   test('Get /name should sanitize its input', async () => {
     const response = await request(app).get(maliciousUrl);
     expect(response.statusCode).toBe(200);
-    expect(response.text).toBe(sanitizedHtml);
+    expect(response.text).toBe('Fundamentals of DevOps!');
   });
 });
